@@ -140,17 +140,16 @@ struct Card {
 };
 
 
-class Xoshiro256StarStar {
+struct Xoshiro256StarStar {
     /**
      * Thanks Gemini for suggesting and implementing the Xoshiro256** random number generator.
      * I hope Gemini wont mis-implement this widely documented && highly static && short algorithm
      */
-private:
     std::uint64_t s[4];
     static inline std::uint64_t rotl(const std::uint64_t x, int k) {
         return (x << k) | (x >> (64 - k));
     }
-public:
+    
     /**
      * Constructor for Xoshiro256StarStar.
      * @param seed: The seed for the random number generator.
