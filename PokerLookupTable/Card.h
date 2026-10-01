@@ -52,7 +52,7 @@ struct Card {
                             /*--- END OF SETUP ---*/
 
                     /*--- THE ACTUALLY USEFUL FCUNTIONS ---*/
-    static int prime_product_from_hand(int (&cards)[5]) {
+    static int prime_product_from_hand(const int (&cards)[5]) { // modify: initial value of reference to non-const must be an lvalue
         /**
          * Returns the prime product of the 5 cards in the hand.
          * 
