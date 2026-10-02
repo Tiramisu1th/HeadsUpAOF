@@ -63,7 +63,7 @@ struct Evaluator {
             
             // Gemini said pick power of 2 as size to utilize bitshift and avoid modulus, sounds reasonable to me
             // and `1<<14` is a good balance between load factor `37.7%` and memory usage `16384*(4Bytes + 4Bytes) = 128KB` to be held by L2 Cache, also sounds reasonable to me
-            HashEntry unsuited_entries[16384]{0};
+            HashEntry unsuited_entries[16384];
             
             // return the reference to rank given the prime product
             int& operator[](int prime_product) {
