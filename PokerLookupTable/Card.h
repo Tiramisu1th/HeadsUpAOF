@@ -66,6 +66,22 @@ struct Card {
         return product;
     }
 
+    // To avoid tmp object creation in Evaluator::evaluate_once(...)
+    // deliberately pick pbv over pbr for obvious reason
+    static int prime_product_from_hand(int c1, int c2, int c3, int c4, int c5) {
+        /**
+         * Returns the prime product of the 5 cards in the hand.
+         * 
+         * @param c1: first card
+         * @param c2: second card
+         * @param c3: third card
+         * @param c4: fourth card
+         * @param c5: fifth card
+         * @return: integer prime product of the 5 cards
+        */
+        return get_prime(c1) * get_prime(c2) * get_prime(c3) * get_prime(c4) * get_prime(c5);
+    }
+
     static int prime_product_from_rankbits(int rankbits) {
         /**
          * Returns the prime product using the bitrank (b)
