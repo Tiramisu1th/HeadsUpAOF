@@ -439,6 +439,12 @@ struct Evaluator {
         const int cards[7] = {hole[0], hole[1], board[0], board[1], board[2], board[3], board[4]};
         return evaluate_once(cards);
     }
+
+    // apparently this overhead has to be paid anyway
+    int evaluate_once(int card1, int card2, int card3, int card4, int card5, int card6, int card7) {
+        const int cards[7] = {card1, card2, card3, card4, card5, card6, card7};
+        return evaluate_once(cards);
+    }
 };
 
 #endif
