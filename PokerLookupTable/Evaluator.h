@@ -55,7 +55,7 @@ struct Evaluator {
         // directly using bitrank for flushes will be more efficient cuz shorter array that can be sucked into L1 cache and less function overhead
         static int flush_lookup[7937]; // AKQJT plus off-by-1, or 4096+2048+1024+512+256+1
 
-        // The grown up naughty kid isn't that stupid. despite my freedom to code, why I ultimately follow Gemini's code? 
+        // The naughty kid has grown up and has been refused to ask follow-up questions. despite my freedom to code, why I ultimately follow Gemini's code? 
         // Humanity is like a flock of sheep
         // Nevertheless, thanks COMP2012 for actually being useful because I understood hashmap and probing without spending extra tokens to ask Gemini to explain
         struct FixedSizeHash16384 {
